@@ -209,6 +209,3 @@ WHERE plan_id = 2
   AND next_plan_id = 1
   AND next_start_date BETWEEN '2020-01-01' AND '2020-12-31';
 -- Answer: 0
--- Note: Using LEAD(start_date) to get the actual downgrade event date
--- is critical here. Filtering on the current row's start_date gives
--- incorrect results — a common SQL trap in event-sequence analysis.
